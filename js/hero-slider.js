@@ -26,7 +26,7 @@ fetch("https://camadventurestrapi.onrender.com/api/hero-slides?populate=*")
         const div = document.createElement("div");
         div.className = `carousel-item ${index === 0 ? "active" : ""}`;
         div.innerHTML = `
-          <img src="https://camadventurestrapi.onrender.com${imageUrl}" class="d-block w-100" alt="${title}">
+          <img src="${imageUrl}" class="d-block w-100" alt="${title}">
           <div class="banner-title position-absolute start-50 translate-middle text-center w-100">
             <h2 data-aos="fade-up" data-aos-delay="200">${title}</h2>
             <img src="image/camAdventures_text.png" class="banner-text-img" data-aos="fade-up" data-aos-delay="400">
