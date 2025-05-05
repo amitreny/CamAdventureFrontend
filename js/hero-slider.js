@@ -1,6 +1,6 @@
 fetch("https://camadventurestrapi.onrender.com/api/hero-slides?populate=*")
-  .then(res => res.json())
-  .then(data => {
+  .then((res) => res.json())
+  .then((data) => {
     const slides = data.data;
     const carouselInner = document.getElementById("hero-carousel-inner");
     const indicators = document.getElementById("carousel-indicators");
@@ -18,9 +18,10 @@ fetch("https://camadventurestrapi.onrender.com/api/hero-slides?populate=*")
         const imageArray = slide.Image;
 
         // Get the first image URL from the Image array
-        const imageUrl = imageArray?.[0]?.url 
-          ? `https://camadventurestrapi.onrender.com${imageArray[0].url}` 
-          : null;
+        let rawUrl = imageArray?.[0]?.url || "";
+        const imageUrl = rawUrl.startsWith("http")
+          ? rawUrl
+          : `https://camadventurestrapi.onrender.com${rawUrl}`;
 
         if (!imageUrl) {
           console.warn("Slide missing image:", slide);
@@ -50,6 +51,6 @@ fetch("https://camadventurestrapi.onrender.com/api/hero-slides?populate=*")
         indicators.appendChild(button);
       });
   })
-  .catch(err => {
+  .catch((err) => {
     console.error("Failed to load hero slides:", err);
   });
