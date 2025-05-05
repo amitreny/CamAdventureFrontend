@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamAdventures</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/media-query.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+    <section class="position-relative">
+        <div>
+            <div class="background-inner-image"></div>
+            <div class="background-main-inner-image position-relative">
+                <img src="image/background_inner_img.jpg" class="img-fluid w-100">
+                <div class="banner-overlay"></div>
+            </div>
+            <div class="banner-title position-absolute top-50 start-50 translate-middle text-center w-100">
+                <h4 data-aos="fade-up" data-aos-delay="200">Profile</h4>
+            </div>
+        </div>
+        <header id="header-bar" class="header-bar-sec"></header>
+    </section>
+
+    <section class="profile-sec">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9 col-lg-7">
+                    <div class="toggle-wrapper mb-4">
+                        <div class="toggle-tabs d-flex">
+                            <button id="loginBtn" class="btn btn-toggle active" onclick="toggleForm('login')">Login</button>
+                            <button id="signupBtn" class="btn btn-toggle" onclick="toggleForm('signup')">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="card profile-card">
+                        <div id="loginForm">
+                            <h4 class="text-center mb-4">Login</h4>
+                            <input type="text" class="form-control mb-3" placeholder="Full Name" />
+                            <input type="email" class="form-control mb-3" placeholder="Email" />
+                            <input type="password" class="form-control mb-3" placeholder="Password" />
+                            <div class="d-flex justify-content-end mb-3">
+                                <a href="#" class="recovery-text">Recovery Password</a>
+                            </div>
+                            <button class="profile-sign-btn mb-2">Sign in</button>
+                            <button class="profile-google-btn mb-4">
+                                <img src="image/google_icon.svg" class="google-icon-img"> Sign in with Google
+                            </button>
+                            <div class="have-account-text text-center">
+                                Don't have an account yet? <a href="#" onclick="toggleForm('signup')">Sign Up</a>
+                            </div>
+                        </div>
+                        <div id="signupForm" style="display: none;">
+                            <h4 class="text-center mb-4">Sign Up</h4>
+                            <input type="text" class="form-control mb-4" placeholder="Full Name" />
+                            <input type="email" class="form-control mb-4" placeholder="Email" />
+                            <input type="password" class="form-control mb-4" placeholder="Password" />
+                            <input type="password" class="form-control mb-4" placeholder="Retype Password" />
+                            <button class="profile-sign-btn">Signup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 2000,
+                once: true
+            });
+        });
+
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelectorAll('[data-aos]').forEach(el => {
+                    if (!el.classList.contains('aos-animate')) {
+                        el.classList.add('aos-animate');
+                    }
+                });
+            }, 500);
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/header-footer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Add Destinations</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .hidden { display: none; }
+    label { display: block; margin-top: 10px; }
+    input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+    button { margin-top: 15px; padding: 10px 15px; }
+  </style>
+</head>
+<body>
+
+  <h1>Admin Panel</h1>
+
+  <div id="login-form">
+    <h2>Login</h2>
+    <label>Username:
+      <input type="text" id="username">
+    </label>
+    <label>Password:
+      <input type="password" id="password">
+    </label>
+    <button onclick="login()">Login</button>
+    <p id="login-message"></p>
+  </div>
+
+  <div id="add-form" class="hidden">
+    <h2>Add Destination</h2>
+    <label>Name:
+      <input type="text" id="name">
+    </label>
+    <label>Image URL:
+      <input type="text" id="image">
+    </label>
+    <label>Price:
+      <input type="number" id="price" step="0.01">
+    </label>
+    <label>Description:
+      <textarea id="description"></textarea>
+    </label>
+    <button onclick="addDestination()">Add Destination</button>
+    <p id="add-message"></p>
+  </div>
+
+  <script>
+    let token = '';
+
+    async function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const message = document.getElementById('login-message');
+
+      const res = await fetch('http://localhost:3000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        token = data.token;
+        document.getElementById('login-form').classList.add('hidden');
+        document.getElementById('add-form').classList.remove('hidden');
+      } else {
+        message.textContent = 'Login failed. Check credentials.';
+      }
+    }
+
+    async function addDestination() {
+      const name = document.getElementById('name').value;
+      const image = document.getElementById('image').value;
+      const price = parseFloat(document.getElementById('price').value);
+      const description = document.getElementById('description').value;
+      const message = document.getElementById('add-message');
+
+      const res = await fetch('http://localhost:3000/api/products', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ name, image, price, description })
+      });
+
+      if (res.ok) {
+        message.textContent = 'Destination added successfully!';
+      } else {
+        message.textContent = 'Failed to add destination.';
+      }
+    }
+  </script>
+
+</body>
+</html>

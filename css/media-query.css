@@ -1,0 +1,331 @@
+@media only screen and (max-width: 1400px) {
+    .slick-dots {
+        bottom: 336px !important;
+    }
+    .timeline-tour .circle {
+        width: 200px;
+        height: 200px;
+    }
+    .timeline-tour .arc {
+        width: 215px;
+        height: 120px;
+        border-radius: 0 0 17em 17em;
+        top: 88px;
+        left: 50%;
+    }
+    .timeline-tour .dot-left,
+    .timeline-tour .dot-right {
+        top: 86px;
+    }
+    .timeline-tour .line-left,
+    .timeline-tour .line-right {
+        top: 90px;
+    }
+    .timeline-tour .line-right {
+        width: 60px;
+        right: -66px;
+    }
+    .timeline-tour .dot-right {
+        right: -70px;
+    }
+    .timeline-tour .arc-top {
+        width: 212px;
+        height: 101px;
+        border-radius: 17em 17em 0 0;
+        bottom: 108px;
+        left: 50%;
+    }
+    .timeline-tour-margin-even-circle {
+        margin-top: 80px;
+    }
+    .timeline-tour-margin-odd-circle {
+        margin-top: 0px;
+    }
+    .curated-tours-margin-even-circle {
+        margin-top: 102px;
+    }
+    .curated-tours-margin-odd-circle {
+        margin-top: -27px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .banner-box-content-sec .select-box {
+        min-width: 280px;
+    }
+    .banner-box-content-sec .select-drop {
+        margin-right: -50px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .banner-title h2 {
+        font-size: 70px;
+    }
+    .banner-title h4 {
+        font-size: 40px;
+    }
+    .sub-head-sec h3 {
+        font-size: 45px;
+    }
+    .still-found-title h5 {
+        font-size: 45px;
+    }
+    .still-found-title h4 {
+        font-size: 45px;
+    }
+    .feedbacks-main-title h5 {
+        font-size: 45px;
+    }
+    .slick-dots {
+        bottom: 398px !important;
+    }
+    .blog-content {
+        width: 50%;
+    }
+    .contact-form-box {
+        width: 90%;
+    }
+    .curated-tours-margin-even-circle {
+        margin-top: 0px;
+    }
+    .timeline-tour-margin-even-circle {
+        margin-top: 0px;
+    }
+    .thankyou-content h4 {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .banner-title h2 {
+        font-size: 60px;
+    }
+    .banner-title h4 {
+        font-size: 35px;
+    }
+    .sub-head-sec h3 {
+        font-size: 40px;
+    }
+    .upcoming-center-img {
+        margin-top: 48px;
+    }
+    .still-found-title h5 {
+        font-size: 40px;
+    }
+    .still-found-title h4 {
+        font-size: 40px;
+    }
+    .feedbacks-main-title h5 {
+        font-size: 40px;
+    }
+    .slick-dots {
+        bottom: 371px !important;
+    }
+    .blog-details-title h5 {
+        font-size: 45px;
+    }
+    .contact-bg-sec {
+        background-image: url('../image/contact_bg_tablet_img.jpg');
+    }
+    .contact-form-box {
+        width: 100%;
+    }
+    .contact-form-box {
+        padding: 4em 3em;
+        margin: 6em 0 6em 0em;
+        transform: translate(0px, 50px);
+    }
+    .photo-quest-box {
+        width: auto;
+    }
+    .still-found-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .curated-tours-margin-odd-circle {
+        margin-top: 20px;
+    }
+    .thankyou-content h4 {
+        font-size: 55px;
+    }
+    .thankyou-icon i {
+        font-size: 90px;
+    }
+    .destination-popup {
+        position: static;
+        display: none;
+        height: 700px;
+        overflow-y: auto;
+    }
+    .profile-card h4 {
+        font-size: 36px;
+    }
+    .profile-card h3 {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner-title h2 {
+        font-size: 50px;
+    }
+    .banner-title h4 {
+        font-size: 30px;
+    }
+    .sub-head-sec h3 {
+        font-size: 35px;
+    }
+    .still-found-title h5 {
+        font-size: 35px;
+    }
+    .still-found-title h4 {
+        font-size: 35px;
+    }
+    .feedbacks-main-title h5 {
+        font-size: 35px;
+    }
+    .feedback-author h6 {
+        font-size: 18px;
+    }
+    .follow-head h5 {
+        font-size: 20px;
+    }
+    .follow-head h6 {
+        font-size: 20px;
+    }
+    .footer-sec h5 {
+        font-size: 18px;
+    }
+    .blog-details-title h5 {
+        font-size: 45px;
+    }
+    .banner-box-content-sec {
+        margin: 0 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .thankyou-content h4 {
+        font-size: 50px;
+    }
+    .thankyou-icon i {
+        font-size: 80px;
+    }
+    .profile-card h4 {
+        font-size: 32px;
+    }
+    .profile-card h3 {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .banner-title h2 {
+        font-size: 40px;
+    }
+    .banner-title h4 {
+        font-size: 25px;
+    }
+    .banner-box h5 {
+        font-size: 22px;
+    }
+    .sub-head-sec h3 {
+        font-size: 30px;
+    }
+    .still-found-title h5 {
+        font-size: 30px;
+    }
+    .still-found-title h4 {
+        font-size: 30px;
+    }
+    .still-found-box {
+        margin: 0 25px;
+    }
+    .feedbacks-main-title h5 {
+        font-size: 30px;
+    }
+    .feedback-author h6 {
+        font-size: 16px;
+    }
+    .feedbacks-main-star span {
+        font-size: 20px;
+    }
+    .follow-head h5 {
+        font-size: 16px;
+    }
+    .follow-head h6 {
+        font-size: 16px;
+    }
+    .stay-up {
+        height: 300px;
+        margin: 0 8px;
+    }
+    .footer-sec h5 {
+        font-size: 16px;
+    }
+    .copyright-text {
+        font-size: 14px;
+    }
+    .blog-details-title h5 {
+        font-size: 40px;
+    }
+    .responsive-map {
+        padding-bottom: 100%;
+    }
+    .thankyou-content h4 {
+        font-size: 45px;
+    }
+    .thankyou-icon i {
+        font-size: 70px;
+    }
+    .header-logo {
+        width: 260px;
+    }
+    .profile-card {
+        padding: 30px 40px 45px 40px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .banner-text-img {
+        width: 65%;
+    }
+    .banner-box h5 {
+        font-size: 20px;
+    }
+    .feedback-author h6 {
+        font-size: 14px;
+    }
+    .copyright-text {
+        font-size: 12px;
+    }
+    .blog-content h5 {
+        font-size: 16px;
+    }
+    .blog-content a {
+        margin-top: 20px;
+    }
+    .blog-details-title h5 {
+        font-size: 35px;
+    }
+    .thankyou-content h4 {
+        font-size: 40px;
+    }
+    .thankyou-icon i {
+        font-size: 60px;
+    }
+    .header-logo {
+        width: 200px;
+    }
+    .profile-card h4 {
+        font-size: 28px;
+    }
+    .profile-card h3 {
+        font-size: 28px;
+    }
+    .profile-card {
+        padding: 20px 20px 25px 20px;
+    }
+}
