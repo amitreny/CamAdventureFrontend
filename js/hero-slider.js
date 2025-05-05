@@ -16,13 +16,18 @@ fetch("https://camadventurestrapi.onrender.com/api/hero-slides?populate=*")
         const title = slide.Title || "Untitled";
         const subtitle = slide.Subtitle || "";
         const imageArray = slide.Image;
-        const imageUrl = imageArray?.[0]?.url;
+
+        // Get the first image URL from the Image array
+        const imageUrl = imageArray?.[0]?.url 
+          ? `https://camadventurestrapi.onrender.com${imageArray[0].url}` 
+          : null;
 
         if (!imageUrl) {
           console.warn("Slide missing image:", slide);
           return;
         }
 
+        // Create the slide element
         const div = document.createElement("div");
         div.className = `carousel-item ${index === 0 ? "active" : ""}`;
         div.innerHTML = `
@@ -35,6 +40,7 @@ fetch("https://camadventurestrapi.onrender.com/api/hero-slides?populate=*")
         `;
         carouselInner.appendChild(div);
 
+        // Add indicator button
         const button = document.createElement("button");
         button.type = "button";
         button.setAttribute("data-bs-target", "#carouselBannerAutoplaying");
