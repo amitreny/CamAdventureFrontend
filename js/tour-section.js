@@ -1,5 +1,5 @@
 fetch(
-  "http://localhost:1337/api/tour-sections?populate[TourItem][populate]=image"
+  "https://camadventurestrapi.onrender.com/api/tour-sections?populate[TourItem][populate]=image"
 )
   .then((res) => res.json())
   .then((data) => {
@@ -53,7 +53,7 @@ fetch(
         tourCard.innerHTML = `
           <a href="${item.link}">
             <div class="tours-sec-main position-relative">
-              <img src="http://localhost:1337${imgUrl}" class="img-fluid w-100" alt="${item.title}">
+              <img src="https://camadventurestrapi.onrender.com${imgUrl}" class="img-fluid w-100" alt="${item.title}">
               <div class="tours-sec">
                 <h3>${item.title}</h3>
                 <div class="tours-sec-text"></div> <!-- Will hold rich text HTML -->
