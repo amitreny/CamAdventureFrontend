@@ -50,18 +50,23 @@ fetch(
 
         const tourCard = document.createElement("div");
         tourCard.className = "col-12 col-sm-6 col-lg-4 mt-3 mb-3";
+
+        const fullImageUrl = imgUrl.startsWith("http")
+          ? imgUrl
+          : `https://camadventurestrapi.onrender.com${imgUrl}`;
+
         tourCard.innerHTML = `
-          <a href="${item.link}">
-            <div class="tours-sec-main position-relative">
-              <img src="https://camadventurestrapi.onrender.com${imgUrl}" class="img-fluid w-100" alt="${item.title}">
-              <div class="tours-sec">
-                <h3>${item.title}</h3>
-                <div class="tours-sec-text"></div> <!-- Will hold rich text HTML -->
-                <a href="${item.link}" class="read-more">Read more</a>
-              </div>
-            </div>
-          </a>
-        `;
+  <a href="${item.link}">
+    <div class="tours-sec-main position-relative">
+      <img src="${fullImageUrl}" class="img-fluid w-100" alt="${item.title}">
+      <div class="tours-sec">
+        <h3>${item.title}</h3>
+        <div class="tours-sec-text"></div> <!-- Will hold rich text HTML -->
+        <a href="${item.link}" class="read-more">Read more</a>
+      </div>
+    </div>
+  </a>
+`;
 
         const descContainer = tourCard.querySelector(".tours-sec-text");
         let descHTML = "No description available";
