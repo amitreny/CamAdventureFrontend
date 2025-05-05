@@ -19,6 +19,11 @@ fetch("https://camadventurestrapi.onrender.com/api/hero-slides?populate=*")
 
         // Get the first image URL from the Image array
         let rawUrl = imageArray?.[0]?.url || "";
+
+        if (rawUrl.startsWith("https//")) {
+          rawUrl = rawUrl.replace("https//", "https://");
+        }
+
         const imageUrl = rawUrl.startsWith("http")
           ? rawUrl
           : `https://camadventurestrapi.onrender.com${rawUrl}`;
